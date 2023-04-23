@@ -9,6 +9,18 @@ console.log(num2);
 let resultat = '';
 let entrada_incorrecta = false;
 
+function isPrime(num) {
+    if (num <= 1) {
+      return false;
+    }
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
 if ((num1 % 1 !== 0) || num1<1 || num1>50 || (num2 % 1 !== 0) || num2<1 || num2>50) {
     resultat += 'Ho sento pero els valors introduits han de ser números sencers positius entre 1 i 50'
     entrada_incorrecta = true;
@@ -16,7 +28,17 @@ if ((num1 % 1 !== 0) || num1<1 || num1>50 || (num2 % 1 !== 0) || num2<1 || num2>
 
 if (entrada_incorrecta==false) {
     resultat += 'El resultat del exercici és: ' + '\n';
+
     resultat += `La suma dels dos números és: ${num1 + num2}\r\n`;
+
+    if (isPrime(num1)) {
+        resultat += `El número ${num1} es primo `
+    }else (resultat += `El número ${num1} NO es primo `)
+    if (isPrime(num2)) {
+        resultat += `y el número ${num2} es primo`
+    }else (resultat += `y el número ${num2} NO es primo`)
+    
+
 }
 
 
