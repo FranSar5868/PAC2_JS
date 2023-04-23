@@ -21,6 +21,10 @@ function isPrime(num) {
     return true;
   }
 
+  function isEven(num) {
+    return num % 2 === 0;
+  }
+
 if ((num1 % 1 !== 0) || num1<1 || num1>50 || (num2 % 1 !== 0) || num2<1 || num2>50) {
     resultat += 'Ho sento pero els valors introduits han de ser números sencers positius entre 1 i 50'
     entrada_incorrecta = true;
@@ -37,6 +41,15 @@ if (entrada_incorrecta==false) {
     if (isPrime(num2)) {
         resultat += `y el número ${num2} es primo`
     }else (resultat += `y el número ${num2} NO es primo`)
+
+    resultat += '\r\n';
+
+    if (isEven(num1)) {
+        resultat += `El número ${num1} es par `
+    }else (resultat += `El número ${num1} es impar `)
+    if (isEven(num2)) {
+        resultat += `y el número ${num2} es par`
+    }else (resultat += `y el número ${num2} es impar`)
     
 
 }
