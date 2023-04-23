@@ -72,6 +72,5 @@ resultat += '\r\n';
 
 resultat += `El rango es ${rango}`
 
-alert (resultat);
-
 }
+alert (resultat);
