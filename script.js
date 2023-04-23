@@ -16,7 +16,9 @@ if ((num1 % 1 !== 0) || num1<1 || num1>50 || (num2 % 1 !== 0) || num2<1 || num2>
 
 if (entrada_incorrecta==false) {
     resultat += 'El resultat del exercici és: ' + '\n';
+    resultat += `La suma dels dos números és: ${num1 + num2}\r\n`;
 }
+
 
 
 console.log(resultat, entrada_incorrecta);
